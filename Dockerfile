@@ -25,8 +25,8 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
  && rm apache-tomcat-*.tar.gz \
  && mv apache-tomcat* tomcat
 
-RUN curl -O -L https://github.com/zefyros/Sextant-DeepCube/raw/master/JerseyServer/target/Sextant-3.0.0.war \
- && mv Sextant-3.0.0.war /tomcat/webapps/SextantDC.war
+RUN curl -O -L https://github.com/zefyros/SextantDC/raw/main/Sextant.war \
+ && mv Sextant.war /tomcat/webapps/Sextant-DeepCube.war
 
 CMD ["/tomcat/bin/catalina.sh", "run"]
 
